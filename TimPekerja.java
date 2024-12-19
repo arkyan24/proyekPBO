@@ -66,4 +66,5 @@ public abstract class TimPekerja {
     public int DurationProject(Proyek project, String idProyek) {
         return projectManager.getProjectDuration(idProyek);
     }
+
 }

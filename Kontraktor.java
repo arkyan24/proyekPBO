@@ -7,4 +7,5 @@ class Kontraktor extends TimPekerja {
     public int Gaji(int durationProject) {
         return durationProject * 300000;
     }
+    
 }

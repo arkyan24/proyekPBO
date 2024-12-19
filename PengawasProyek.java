@@ -7,4 +7,5 @@ class PengawasProyek extends TimPekerja {
     public int Gaji(int durationProject) {
         return 5000000 + (durationProject * 200000);
     }
+    
 }

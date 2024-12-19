@@ -7,4 +7,5 @@ class TenagaKerja extends TimPekerja {
     public int Gaji(int durationProject) {
         return 3000000 + (durationProject * 100000);
     }
+    
 }
