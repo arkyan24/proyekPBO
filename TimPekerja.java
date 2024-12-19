@@ -1,35 +1,26 @@
-import java.util.ArrayList;
 import java.util.Date;
 
-public abstract class TimPekerja {
+abstract class TimPekerja {
     private String id;
     private String nama;
     private Date tanggalMasuk;
-    private ArrayList<String> anggotaTim = new ArrayList<>();
+    private String idProyek;  // To store the assigned project
 
-    // Constructor
-    public TimPekerja(String id, String nama, Date tanggalMasuk) {
+    public TimPekerja(String id, String nama) {
         this.id = id;
         this.nama = nama;
-        this.tanggalMasuk = tanggalMasuk;
     }
 
-    // Abstract method
     public abstract int Gaji(int durationProject);
 
-    // Add a project to the team member's project list
     public void TambahProyek(String idProyek) {
-        if (!anggotaTim.contains(idProyek)) {
-            anggotaTim.add(idProyek);
-        }
+        this.idProyek = idProyek;
     }
 
-    // Mengahpus Proyek
-    public void HapusProyek(String idProyek) {
-        anggotaTim.remove(idProyek);
+    public void HapusProyek() {
+        this.idProyek = null;
     }
 
-    // Getters and Setters
     public String getId() {
         return id;
     }
@@ -54,17 +45,8 @@ public abstract class TimPekerja {
         this.tanggalMasuk = tanggalMasuk;
     }
 
-    public ArrayList<String> getAnggotaTim() {
-        return anggotaTim;
-    }
-
-    public void setAnggotaTim(ArrayList<String> anggotaTim) {
-        this.anggotaTim = anggotaTim;
-    }
-
-    // Mengambil Duration dari class Proyek
-    public int DurationProject(Proyek project, String idProyek) {
-        return projectManager.getProjectDuration(idProyek);
+    public String getIdProyek() {
+        return idProyek;
     }
 
 }
