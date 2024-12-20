@@ -48,5 +48,4 @@ abstract class TimPekerja {
     public String getIdProyek() {
         return idProyek;
     }
-
 }
